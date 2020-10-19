@@ -24,8 +24,8 @@ class CategoryUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|max:255|unique:categories'.$this->route('categories'),
-            'slug' => 'required|max:255|unique:categories'.$this->route('categories'),
+            'title' => 'required|max:255|unique:categories'.$this->route('category'),
+            'slug' => 'required|max:255|unique:categories'.$this->route('category'),
         ];
     }
 }

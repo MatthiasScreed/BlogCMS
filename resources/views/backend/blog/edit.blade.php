@@ -24,12 +24,11 @@
     <section class="content">
         <div class="row">
             {!! Form::model($post, [
-                'method' => 'PUT',
-                'route' => ['backend.blog.store', $post->id],
+                'method' => 'put',
+                'route' => ['backend.blog.update', $post->id],
                 'files' => TRUE,
                 'id' => 'post-form'
             ])!!}
-                {{ csrf_field() }}
                 @include('backend.blog.form')
           {!! Form::close() !!}
         </div>
